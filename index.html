@@ -5,8 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Rajdhani"
+    />
     <script defer src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Near Earth Asteroid Tracker</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Near Earth Asteroid Tracker</h1>
+    <div>
+      <span><h4>Chicxulub impactor</h4></span>
+      <span><h4>Selected Object</h4></span>
+      <span><h4>Chelyabinsk meteor</h4></span>
+    </div>
+
+    <table class="center-table">
+      <tr>
+        <th data-column="name" data-order="desc">Name</th>
+        <th data-column="closest-approach">Closest Approach Date</th>
+        <th data-column="max-diameter">Max Diameter</th>
+      </tr>
+
+      <tbody id="neo-table"></tbody>
+    </table>
+    <img src="assets\earth.png" class="earth" />
+  </body>
 </html>
