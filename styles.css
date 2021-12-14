@@ -15,10 +15,26 @@
   border-radius: 20%;
 }
 
+.compare-size {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(34, 34, 34);
+}
+
 .center-table {
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(34, 34, 34);
+}
+
+.chicxulub {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.chelyabinsk {
+  max-width: 2%;
+  max-height: 2%;
 }
 
 th {

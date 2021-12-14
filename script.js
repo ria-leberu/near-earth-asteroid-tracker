@@ -1,6 +1,8 @@
-const API_URL = "https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=ae0cwPIDUkVuV1WnhrlmufZ0ZQh2apcw413h3Bpk"
+const API_URL = "https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=ae0cwPIDUkVuV1WnhrlmufZ0ZQh2apcw413h3Bpk";
 
-const TEST_DATA = "test-data.json"
+const TEST_DATA = "test-data.json";
+
+let sortDirection = false;
 
 const neoData = getNEOData();
 
@@ -13,9 +15,11 @@ async function getNEOData(){
 
 }
 
-$('th').on('click', function(){
+
+
+/* $('th').on('click', function(){
     console.log('Column was clicked')
-})
+}) */
 
 
 neoData
@@ -68,4 +72,15 @@ function fDate(s) {
     d.setMonth(s[1]);
     d.setDate(s[2]);
     return d;
+}
+
+function sortColumn(columnName) {
+    const dataType = typeof columnName;
+    console.log(dataType)
+    sortDirection = !sortDirection;
+
+    switch(dataType) {
+         
+    }
+
 }

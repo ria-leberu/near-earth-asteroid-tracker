@@ -15,17 +15,26 @@
   </head>
   <body>
     <h1>Near Earth Asteroid Tracker</h1>
-    <div>
-      <span><h4>Chicxulub impactor</h4></span>
-      <span><h4>Selected Object</h4></span>
-      <span><h4>Chelyabinsk meteor</h4></span>
-    </div>
+
+    <table class="compare-size">
+      <tr>
+        <td>Chicxulub impactor (81000 meters)</td>
+        <td>Selected Object</td>
+        <td>Chelyabinsk meteor (20 meters)</td>
+      </tr>
+
+      <tr>
+        <td><img src="assets\meteor.png" class="chicxulub" /></td>
+        <td></td>
+        <td><img src="assets\meteor.png" class="chelyabinsk" /></td>
+      </tr>
+    </table>
 
     <table class="center-table">
       <tr>
-        <th data-column="name" data-order="desc">Name</th>
-        <th data-column="closest-approach">Closest Approach Date</th>
-        <th data-column="max-diameter">Max Diameter</th>
+        <th data-column="name">Name</th>
+        <th onclick="sortColumn('approach_date')">Closest Approach Date</th>
+        <th onclick="sortColumn('max_diameter')">Max Diameter</th>
       </tr>
 
       <tbody id="neo-table"></tbody>
