@@ -2,9 +2,9 @@ const API_URL = "https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=ae0cwPIDUkV
 
 const TEST_DATA = "test-data.json";
 
-let sortDirection = false;
-
 const neoData = getNEOData();
+
+//let finalTable
 
 async function getNEOData(){
     const response = await fetch(API_URL);
@@ -18,12 +18,24 @@ async function getNEOData(){
 
 
 /* $('th').on('click', function(){
-    console.log('Column was clicked')
+    let column = $(this).data('column')
+    let order = $(this).data('order')
+    console.log('Column was clicked', column, order)
+
+    if(order == 'desc'){
+        $(this).data('order', "asc")
+        finalTable = finalTable.sort((a,b) => a[column] > b[column] ? 1 : -1)
+    }
+    else {
+        $(this).data('order', "desc")
+        finalTable = finalTable.sort((a,b) => a[column] < b[column] ? 1 : -1)
+    }
 }) */
 
 
 neoData
 .then(data => {buildTable(data.near_earth_objects);});
+
 
 
 function buildTable(data) {
@@ -72,15 +84,4 @@ function fDate(s) {
     d.setMonth(s[1]);
     d.setDate(s[2]);
     return d;
-}
-
-function sortColumn(columnName) {
-    const dataType = typeof columnName;
-    console.log(dataType)
-    sortDirection = !sortDirection;
-
-    switch(dataType) {
-         
-    }
-
 }
