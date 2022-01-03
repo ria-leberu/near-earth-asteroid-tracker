@@ -4,6 +4,8 @@ const TEST_DATA = "test-data.json";
 
 const neoData = getNEOData();
 
+const VALUE_PER_METER_USD = 10000000000
+
 
 
 
@@ -49,7 +51,7 @@ function buildTable(data) {
 
             <td>${data[i].estimated_diameter.meters.estimated_diameter_max.toFixed(0)} meters </td>
 
-
+            <td>\$${estimateValue(data[i].estimated_diameter.meters.estimated_diameter_max.toFixed(0))} Trillion</td>
         </tr>`
 
        /*  for (let j=0; j<data[i].close_approach_data.length; j++){
@@ -76,7 +78,6 @@ function buildTable(data) {
     return approach_date_list[i].close_approach_date
 } 
 
-    
 //convert to date format
 function fDate(s) {
     let d = new Date();
@@ -85,4 +86,14 @@ function fDate(s) {
     d.setMonth(s[1]);
     d.setDate(s[2]);
     return d;
+}
+
+/* Makes a very rough estimate of the value of the asteroid
+Assumptions: 
+    Metallic Asteroid (80% Fe, 20% Cobalt, Nickel, Ruthenium, Palladium, Osmium, Iridium, Platinum)
+
+*/
+function estimateValue(diameter) {
+    value = (diameter*VALUE_PER_METER_USD)/1000000000
+    return value
 }

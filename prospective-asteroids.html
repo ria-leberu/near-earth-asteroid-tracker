@@ -24,19 +24,33 @@
         </li>
       </ul>
     </nav>
+    <div class="row">
+      <div class="column">
+        <table class="left-table">
+          <tr>
+            <th data-column="name" data-order="desc">Name</th>
+            <th data-column="approach_date" data-order="desc">
+              Closest Approach Date
+            </th>
+            <th data-column="diameter" data-order="desc">Max Diameter</th>
+            <th data-column="value_usd">Estimated Value (USD)</th>
+          </tr>
+          <tbody id="neo-table"></tbody>
+        </table>
+      </div>
 
-    <table class="center-table">
-      <tr>
-        <th data-column="name" data-order="desc">Name</th>
-        <th data-column="approach_date" data-order="desc">
-          Closest Approach Date
-        </th>
-        <th data-column="diameter" data-order="desc">Max Diameter</th>
-      </tr>
-
-      <tbody id="neo-table"></tbody>
-    </table>
-
-    <!-- <img src="assets\earth.png" class="earth" /> -->
+      <div class="column" id="prospect-summary">
+        <h3>Estimates assume:</h3>
+        <ul>
+          <li>M-class Asteroid (80% Fe, 20% Ni, Co, Other Rare Metals)</li>
+          <li>Consistent Composition</li>
+          <li>Current Commodity Values</li>
+        </ul>
+        <h5>
+          Asteroid Designation, Approach Dates and Diameter Estimates based on
+          data from NASA (JPL Asteroid Team API).
+        </h5>
+      </div>
+    </div>
   </body>
 </html>

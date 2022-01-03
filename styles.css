@@ -30,6 +30,14 @@ nav > ul > li {
   padding: 10px;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: 600;
+}
+
 body {
   width: 100%;
 }
@@ -58,6 +66,45 @@ header > p {
   margin-top: 5%;
 }
 
+.column {
+  float: left;
+  width: 40%;
+  margin-left: 10%;
+  margin-right: auto;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#prospect-summary {
+  margin-top: 10px;
+  margin-left: 10%;
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0.582);
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#prospect-summary > ul {
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 20%;
+}
+
+#prospect-summary > ul > li {
+  text-align: left;
+}
+
+#prospect-summary > h5 {
+  margin-top: 20px;
+  width: 60%;
+  padding-left: 20%;
+}
+
 .text-block {
   font-size: 20px;
   position: absolute;
@@ -75,8 +122,9 @@ header > p {
   /* background-color: rgb(34, 34, 34); */
 }
 
-.center-table {
-  margin-left: auto;
+.left-table {
+  margin-top: 10px;
+  margin-left: 10%;
   margin-right: auto;
   /* background-color: rgb(34, 34, 34); */
 }
@@ -88,7 +136,7 @@ th {
 
 td {
   padding: 10px;
-  background-color: rgba(10, 10, 39, 0.733);
+  background-color: rgba(0, 0, 0, 0.733);
 }
 
 h1 {
