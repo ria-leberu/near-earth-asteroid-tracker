@@ -66,6 +66,14 @@ header > p {
   margin-top: 5%;
 }
 
+#services-1 {
+  margin-top: 10px;
+}
+
+.services-row {
+  margin-right: 30%;
+}
+
 .column {
   float: left;
   width: 40%;
