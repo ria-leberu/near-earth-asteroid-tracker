@@ -4,33 +4,8 @@ const TEST_DATA = "test-data.json";
 
 const neoData = getNEOData();
 
-//let finalTable
 
-const openModalButtons = document.querySelectorAll('[data-modal-target')
-const closeModalButtons = document.querySelectorAll('[data-close-button')
 
-openModalButtons.forEach(button=> {
-    button.addEventListener('click', () => {
-        const modal = document.querySelector(button.dataset.modalTarget)
-        openModalButtons(modal)
-    })
-})
-closeModalButtons.forEach(button=> {
-    button.addEventListener('click', () => {
-        const modal = button.closest('.modal')
-        closeModalButtons(modal)
-    })
-})
-
-function openModal(modal) {
-    if (modal == null) return
-    modal.classList.add('active')
-}
-
-function closemodal(modal) {
-    if (modal == null) return
-    modal.classList.remove('active')
-}
 
 async function getNEOData(){
     const response = await fetch(API_URL);
