@@ -1,40 +1,49 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: rajdhani;
   color: whitesmoke;
-  background-color: black;
+
   text-align: center;
 }
 
-.earth {
-  position: absolute;
-  bottom: -500px;
-  left: 0px;
-  opacity: 15%;
-  border-radius: 20%;
+html {
+  background: url(assets/post-launch.jpg) no-repeat center fixed;
+  background-size: cover;
+  background-position: -100px;
+  background-color: black;
+}
+
+.nav-logo {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+nav {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.582);
+}
+
+nav > ul > li {
+  display: inline;
+  font-size: 20px;
+  padding: 10px;
+}
+
+body {
+  width: 100%;
 }
 
 .compare-size {
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(34, 34, 34);
+  /* background-color: rgb(34, 34, 34); */
 }
 
 .center-table {
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(34, 34, 34);
-}
-
-.chicxulub {
-  max-width: 80%;
-  max-height: 80%;
-}
-
-.chelyabinsk {
-  max-width: 2%;
-  max-height: 2%;
+  /* background-color: rgb(34, 34, 34); */
 }
 
 th {
@@ -44,42 +53,9 @@ th {
 
 td {
   padding: 10px;
+  background-color: rgba(10, 10, 39, 0.733);
 }
 
 h1 {
   font-family: Rajdhani;
-}
-
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: 200ms ease-in-out;
-  border: 2px solid blue;
-  border-radius: 10px;
-  z-index: 10;
-  background-color: cornflowerblue;
-  max-width: 80%;
-}
-
-.modal.active {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.modal-header {
-  padding: 10px 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid blue;
-}
-
-.modal-header .close-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background: none;
-  font-size: 1.25rem;
-  font-weight: bold;
 }
